@@ -16,6 +16,8 @@ import javax.swing.JFrame;
 public class Ventana extends JFrame {
 	private PanelTitulo panel1;
 	private PanelButtons panel2;
+	private PanelActivity panel3;
+	private PanelEjercicio1 panelej1;
 	/**
 	 * 
 	 */
@@ -29,10 +31,14 @@ public class Ventana extends JFrame {
 		//Declaramos paneles
 		panel1 = new PanelTitulo();
 		panel2 = new PanelButtons();
+		panel3 = new PanelActivity();
+		panelej1 = new PanelEjercicio1();
 		
 		//Alineamos los paneles
 		this.add(panel1, BorderLayout.NORTH);
 		this.add(panel2, BorderLayout.WEST);
+		this.add(panel3, BorderLayout.SOUTH);
+		this.add(panelej1, BorderLayout.CENTER);
 		
 		//Hacemos visible
 		this.setVisible(true);
