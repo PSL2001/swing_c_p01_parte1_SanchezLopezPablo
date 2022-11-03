@@ -28,9 +28,11 @@ public class Ventana extends JFrame {
 		
 		//Declaramos paneles
 		panel1 = new PanelTitulo();
+		panel2 = new PanelButtons();
 		
 		//Alineamos los paneles
 		this.add(panel1, BorderLayout.NORTH);
+		this.add(panel2, BorderLayout.WEST);
 		
 		//Hacemos visible
 		this.setVisible(true);
