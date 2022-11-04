@@ -18,6 +18,7 @@ public class Ventana extends JFrame {
 	private PanelButtons panel2;
 	private PanelActivity panel3;
 	private PanelEjercicio1 panelej1;
+	private PanelEjercicio2 panelej2;
 	/**
 	 * 
 	 */
