@@ -5,8 +5,13 @@
  */
 package swing_c_p01_parte1_SanchezLopezPablo;
 
+import java.awt.BorderLayout;
 import java.awt.GraphicsEnvironment;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
+import java.awt.GridLayout;
 
+import javax.swing.Box;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -16,15 +21,30 @@ import javax.swing.JPanel;
  *
  */
 public class PanelEjercicio2 extends JPanel {
-	private JComboBox cbFuentes;
+	private JComboBox<String> cbFuentes;
 	private JLabel lTexto;
 	
 	/**
 	 * 
 	 */
 	public PanelEjercicio2() {
+		//Obtenemos las fuentes del sistema
 		String [] fuentes = GraphicsEnvironment.getLocalGraphicsEnvironment().getAvailableFontFamilyNames();
-		cbFuentes = new JComboBox()
+		//Las añadimos al comboBox
+		cbFuentes = new JComboBox<String>(fuentes);
+		//Creamos el label con el texto
+		lTexto = new JLabel("En un lugar de la Mancha, de cuyo nombre ...");
+		
+		//Creamos las constrains para cada item y las añadimos al panel
+		Box cajaV = Box.createVerticalBox();
+		cajaV.add(cbFuentes);
+		cajaV.add(lTexto);
+		
+		
+		this.add(cajaV);
+		
+		
+		
 	}
 
 }
