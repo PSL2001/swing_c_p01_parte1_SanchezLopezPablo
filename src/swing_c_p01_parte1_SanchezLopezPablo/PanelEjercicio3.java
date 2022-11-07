@@ -14,15 +14,23 @@ import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 
 /**
- * @author Usuario
+ * The Class PanelEjercicio3.
  *
+ * @author Usuario
  */
 public class PanelEjercicio3 extends JPanel {
+	
+	/** The ltexto 3. */
 	private JLabel ltexto3;
+	
+	/** The bg radio. */
 	private ButtonGroup bgRadio;
+	
+	/** The rb 4. */
 	private JRadioButton rb1, rb2, rb3, rb4;
+	
 	/**
-	 * 
+	 * Instantiates a new panel ejercicio 3.
 	 */
 	public PanelEjercicio3() {
 		this.setLayout(new GridLayout(0, 1, 0, 0));

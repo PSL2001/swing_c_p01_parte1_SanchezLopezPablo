@@ -12,14 +12,20 @@ import javax.swing.JSlider;
 import javax.swing.SwingConstants;
 
 /**
- * @author Usuario
+ * The Class PanelEjercicio4.
  *
+ * @author Usuario
  */
 public class PanelEjercicio4 extends JPanel {
+	
+	/** The slider. */
 	private JSlider slider;
+	
+	/** The ltexto 4. */
 	private JLabel ltexto4;
+	
 	/**
-	 * 
+	 * Instantiates a new panel ejercicio 4.
 	 */
 	public PanelEjercicio4() {
 		slider = new JSlider(SwingConstants.HORIZONTAL,0,45,0);

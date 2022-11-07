@@ -17,15 +17,20 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 /**
- * @author usuario
+ * The Class PanelEjercicio2.
  *
+ * @author usuario
  */
 public class PanelEjercicio2 extends JPanel {
+	
+	/** The cb fuentes. */
 	private JComboBox<String> cbFuentes;
+	
+	/** The ltexto 2. */
 	private JLabel ltexto2;
 	
 	/**
-	 * 
+	 * Instantiates a new panel ejercicio 2.
 	 */
 	public PanelEjercicio2() {
 		//Obtenemos las fuentes del sistema

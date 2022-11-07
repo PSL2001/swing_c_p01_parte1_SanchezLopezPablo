@@ -17,14 +17,20 @@ import javax.swing.JPanel;
 import javax.swing.border.BevelBorder;
 
 /**
- * @author usuario
+ * The Class PanelEjercicio1.
  *
+ * @author usuario
  */
 public class PanelEjercicio1 extends JPanel {
+	
+	/** The ltexto 1. */
 	private JLabel ltexto1;
+	
+	/** The cb cursiva. */
 	private JCheckBox cbNegrita, cbCursiva;
+	
 	/**
-	 * 
+	 * Instantiates a new panel ejercicio 1.
 	 */
 	public PanelEjercicio1() {
 		this.setLayout(new GridLayout(0, 1, 0, 0));

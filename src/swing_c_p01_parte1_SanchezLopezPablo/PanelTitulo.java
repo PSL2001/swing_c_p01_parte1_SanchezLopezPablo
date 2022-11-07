@@ -15,14 +15,20 @@ import javax.swing.SwingConstants;
 import javax.swing.border.BevelBorder;
 
 /**
- * @author usuario
+ * The Class PanelTitulo.
  *
+ * @author usuario
  */
 public class PanelTitulo extends JPanel {
+	
+	/** The logo. */
 	private imageRes logo;
+	
+	/** The l imagen. */
 	private JLabel lalumno, lnombreAlumno, lImagen;
+	
 	/**
-	 * 
+	 * Instantiates a new panel titulo.
 	 */
 	public PanelTitulo() {
 		//Declaramos los paneles

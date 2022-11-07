@@ -18,20 +18,38 @@ import javax.swing.JOptionPane;
 import javax.swing.JToggleButton;
 
 /**
- * @author usuario
+ * The Class Ventana.
  *
+ * @author usuario
  */
 public class Ventana extends JFrame implements ActionListener {
+	
+	/** The panel 1. */
 	private PanelTitulo panel1;
+	
+	/** The panel 2. */
 	private PanelButtons panel2;
+	
+	/** The panel 3. */
 	private PanelActivity panel3;
+	
+	/** The panelej 1. */
 	private PanelEjercicio1 panelej1;
+	
+	/** The panelej 2. */
 	private PanelEjercicio2 panelej2;
+	
+	/** The panelej 3. */
 	private PanelEjercicio3 panelej3;
+	
+	/** The panelej 4. */
 	private PanelEjercicio4 panelej4;
+	
+	/** The panelej 5. */
 	private PanelEjercicio5 panelej5;
+	
 	/**
-	 * 
+	 * Instantiates a new ventana.
 	 */
 	public Ventana() {
 		super("Swing Compendio Parte 1 Pablo Sánchez López");
@@ -90,6 +108,12 @@ public class Ventana extends JFrame implements ActionListener {
 		this.pack();
 		this.setVisible(true);
 	}
+	
+	/**
+	 * Action performed.
+	 *
+	 * @param e the e
+	 */
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if (PanelButtons.btn1.isSelected()) {
@@ -131,8 +155,9 @@ public class Ventana extends JFrame implements ActionListener {
 		
 		
 	}
+	
 	/**
-	 * 
+	 * Mostrar actividades.
 	 */
 	private void mostrarActividades() {
 		int contador = 0;

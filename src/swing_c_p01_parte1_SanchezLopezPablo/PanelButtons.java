@@ -13,13 +13,17 @@ import javax.swing.JPanel;
 import javax.swing.JToggleButton;
 
 /**
- * @author usuario
+ * The Class PanelButtons.
  *
+ * @author usuario
  */
 public class PanelButtons extends JPanel {
+	
+	/** The btn 5. */
 	public static JToggleButton btn1, btn2, btn3, btn4, btn5;
+	
 	/**
-	 * 
+	 * Instantiates a new panel buttons.
 	 */
 	public PanelButtons() {
 		//Declaramos los botones

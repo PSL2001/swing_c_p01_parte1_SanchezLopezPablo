@@ -12,15 +12,23 @@ import javax.swing.JSpinner;
 
 
 /**
- * @author Usuario
+ * The Class PanelEjercicio5.
  *
+ * @author Usuario
  */
 public class PanelEjercicio5 extends JPanel {
+	
+	/** The limg 4. */
 	private JLabel ltexto5, limg1, limg2, limg3, limg4;
+	
+	/** The spinner. */
 	private JSpinner spinner;
+	
+	/** The img 4. */
 	private imageRes img1, img2, img3, img4;
+	
 	/**
-	 * 
+	 * Instantiates a new panel ejercicio 5.
 	 */
 	public PanelEjercicio5() {
 		ltexto5 = new JLabel("¿Cuantas Imágenes quieres mostrar?");

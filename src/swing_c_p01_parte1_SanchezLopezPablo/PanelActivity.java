@@ -9,13 +9,17 @@ import javax.swing.JButton;
 import javax.swing.JPanel;
 
 /**
- * @author usuario
+ * The Class PanelActivity.
  *
+ * @author usuario
  */
 public class PanelActivity extends JPanel {
+	
+	/** The btn activity. */
 	public static JButton btnActivity;
+	
 	/**
-	 * 
+	 * Instantiates a new panel activity.
 	 */
 	public PanelActivity() {
 		btnActivity = new JButton("Ejercicios Activos");

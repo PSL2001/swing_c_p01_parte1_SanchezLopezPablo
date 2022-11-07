@@ -8,13 +8,16 @@ package swing_c_p01_parte1_SanchezLopezPablo;
 import java.awt.Dimension;
 
 /**
- * @author usuario
+ * The Class Main.
  *
+ * @author usuario
  */
 public class Main {
 
 	/**
-	 * @param args
+	 * The main method.
+	 *
+	 * @param args the arguments
 	 */
 	public static void main(String[] args) {
 		Ventana v = new Ventana();

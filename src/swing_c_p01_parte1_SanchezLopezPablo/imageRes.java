@@ -11,20 +11,30 @@ import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 
 /**
- * @author usuario
+ * The Class imageRes.
  *
+ * @author usuario
  */
 public class imageRes {
+	
+	/** The recurso. */
 	private ImageIcon recurso;
+	
 	/**
-	 * 
+	 * Instantiates a new image res.
+	 *
+	 * @param recurso the recurso
 	 */
 	public imageRes(String recurso) {
 		this.recurso = new ImageIcon(getClass().getResource(recurso));
 	}
 	
 	/**
-	 * @param recurso2
+	 * Devolver imagen.
+	 *
+	 * @param ancho the ancho
+	 * @param largo the largo
+	 * @return the image icon
 	 */
 	public ImageIcon devolverImagen(int ancho, int largo) {
 		ImageIcon imagenSinRes = this.recurso;
@@ -34,11 +44,21 @@ public class imageRes {
 		return imageRes;
 	}
 	
+	/**
+	 * Gets the width.
+	 *
+	 * @return the width
+	 */
 	public int getWidth() {
 		ImageIcon imagen = this.recurso;
 		return imagen.getIconWidth();
 	}
 	
+	/**
+	 * Gets the height.
+	 *
+	 * @return the height
+	 */
 	public int getHeight() {
 		ImageIcon imagen = this.recurso;
 		return imagen.getIconHeight();
