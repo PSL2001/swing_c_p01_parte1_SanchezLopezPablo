@@ -5,7 +5,6 @@
  */
 package swing_c_p01_parte1_SanchezLopezPablo;
 
-import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.GridLayout;
@@ -22,7 +21,7 @@ import javax.swing.border.BevelBorder;
  *
  */
 public class PanelEjercicio1 extends JPanel {
-	private JLabel ltexto;
+	private JLabel ltexto1;
 	private JCheckBox cbNegrita, cbCursiva;
 	/**
 	 * 
@@ -30,15 +29,15 @@ public class PanelEjercicio1 extends JPanel {
 	public PanelEjercicio1() {
 		this.setLayout(new GridLayout(0, 1, 0, 0));
 		//Declaramos los campos
-		ltexto = new JLabel();
+		ltexto1 = new JLabel();
 		cbNegrita = new JCheckBox("Negrita");
 		cbCursiva = new JCheckBox("Cursiva");
 		
 		//Añadimos el texto al label
-		ltexto.setText("En un lugar de la Mancha, de cuyo nombre ...");
+		ltexto1.setText("En un lugar de la Mancha, de cuyo nombre ...");
 		//Y añadimos la fuente
-		Font fuente = ltexto.getFont();
-		ltexto.setFont(new Font(fuente.getFontName(), Font.PLAIN, 20));
+		Font fuente = ltexto1.getFont();
+		ltexto1.setFont(new Font(fuente.getFontName(), Font.PLAIN, 20));
 		
 		//Y lo añadimos al panel
 		Box cajaV = Box.createVerticalBox();
@@ -48,7 +47,7 @@ public class PanelEjercicio1 extends JPanel {
 		cajaH.add(cbCursiva);
 		cajaV.add(cajaH);
 		
-		this.add(ltexto);
+		this.add(ltexto1);
 		this.add(cajaV);
 		this.setBorder(BorderFactory.createBevelBorder(BevelBorder.RAISED, Color.BLUE, Color.YELLOW, Color.GRAY, Color.BLACK));
 		

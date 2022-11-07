@@ -5,6 +5,8 @@
  */
 package swing_c_p01_parte1_SanchezLopezPablo;
 
+import java.awt.Dimension;
+
 /**
  * @author usuario
  *
@@ -16,7 +18,7 @@ public class Main {
 	 */
 	public static void main(String[] args) {
 		Ventana v = new Ventana();
-
+		v.setMinimumSize(new Dimension(v.getWidth(), v.getHeight()));
 	}
 
 }

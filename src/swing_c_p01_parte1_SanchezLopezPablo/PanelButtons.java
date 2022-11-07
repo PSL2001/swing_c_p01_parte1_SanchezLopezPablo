@@ -5,6 +5,9 @@
  */
 package swing_c_p01_parte1_SanchezLopezPablo;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.Box;
 import javax.swing.JPanel;
 import javax.swing.JToggleButton;
@@ -14,7 +17,7 @@ import javax.swing.JToggleButton;
  *
  */
 public class PanelButtons extends JPanel {
-	private JToggleButton btn1, btn2, btn3, btn4, btn5;
+	public static JToggleButton btn1, btn2, btn3, btn4, btn5;
 	/**
 	 * 
 	 */
@@ -37,6 +40,7 @@ public class PanelButtons extends JPanel {
 		cajaV.add(btn4);
 		cajaV.add(Box.createVerticalStrut(70));
 		cajaV.add(btn5);
+		
 		this.add(cajaV);
 	}
 

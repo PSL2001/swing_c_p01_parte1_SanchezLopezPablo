@@ -17,7 +17,7 @@ import javax.swing.SwingConstants;
  */
 public class PanelEjercicio4 extends JPanel {
 	private JSlider slider;
-	private JLabel texto;
+	private JLabel ltexto4;
 	/**
 	 * 
 	 */
@@ -28,11 +28,11 @@ public class PanelEjercicio4 extends JPanel {
 		slider.setPaintTicks(true);
 		slider.setPaintLabels(true);
 		
-		texto = new JLabel("En un lugar de la Mancha, de cuyo nombre ...");
+		ltexto4 = new JLabel("En un lugar de la Mancha, de cuyo nombre ...");
 		
 		Box cajaV = Box.createVerticalBox();
 		cajaV.add(slider);
-		cajaV.add(texto);
+		cajaV.add(ltexto4);
 		
 		this.add(cajaV);
 	}

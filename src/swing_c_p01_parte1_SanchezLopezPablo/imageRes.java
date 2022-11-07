@@ -26,12 +26,22 @@ public class imageRes {
 	/**
 	 * @param recurso2
 	 */
-	public ImageIcon devolverImagen() {
+	public ImageIcon devolverImagen(int ancho, int largo) {
 		ImageIcon imagenSinRes = this.recurso;
 		Image imagenImage = imagenSinRes.getImage();
-		imagenImage.getScaledInstance(imagenSinRes.getIconWidth(),imagenSinRes.getIconHeight() ,Image.SCALE_SMOOTH);
+		imagenImage.getScaledInstance(ancho, largo ,Image.SCALE_DEFAULT);
 		ImageIcon imageRes = new ImageIcon(imagenImage);
 		return imageRes;
+	}
+	
+	public int getWidth() {
+		ImageIcon imagen = this.recurso;
+		return imagen.getIconWidth();
+	}
+	
+	public int getHeight() {
+		ImageIcon imagen = this.recurso;
+		return imagen.getIconHeight();
 	}
 
 }

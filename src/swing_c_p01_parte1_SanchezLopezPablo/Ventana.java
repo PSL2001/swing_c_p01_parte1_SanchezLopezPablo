@@ -6,15 +6,22 @@
 package swing_c_p01_parte1_SanchezLopezPablo;
 
 import java.awt.BorderLayout;
+import java.awt.Component;
+import java.awt.Container;
+import java.awt.Dimension;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.Box;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import javax.swing.JToggleButton;
 
 /**
  * @author usuario
  *
  */
-public class Ventana extends JFrame {
+public class Ventana extends JFrame implements ActionListener {
 	private PanelTitulo panel1;
 	private PanelButtons panel2;
 	private PanelActivity panel3;
@@ -56,6 +63,20 @@ public class Ventana extends JFrame {
 		cajaV.add(panelej5);
 		
 		
+		//Ponemos los paneles de los ejercicios invisibles
+		panelej1.setVisible(false);
+		panelej2.setVisible(false);
+		panelej3.setVisible(false);
+		panelej4.setVisible(false);
+		panelej5.setVisible(false);
+		
+		//Listeners
+		PanelButtons.btn1.addActionListener(this);
+		PanelButtons.btn2.addActionListener(this);
+		PanelButtons.btn3.addActionListener(this);
+		PanelButtons.btn4.addActionListener(this);
+		PanelButtons.btn5.addActionListener(this);
+		PanelActivity.btnActivity.addActionListener(this);
 		
 		//Alineamos los paneles
 		this.add(panel1, BorderLayout.NORTH);
@@ -64,8 +85,72 @@ public class Ventana extends JFrame {
 		this.add(cajaV, BorderLayout.CENTER);
 		
 		
-		//Hacemos visible
+		
+		//Hacemos visible y mostramos
+		this.pack();
 		this.setVisible(true);
+	}
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		if (PanelButtons.btn1.isSelected()) {
+			panelej1.setVisible(true);
+		} else {
+			panelej1.setVisible(false);
+		}
+		
+		if (PanelButtons.btn2.isSelected()) {
+			panelej2.setVisible(true);
+		} else {
+			panelej2.setVisible(false);
+		}
+		
+		if (PanelButtons.btn3.isSelected()) {
+			panelej3.setVisible(true);
+		} else {
+			panelej3.setVisible(false);
+		}
+		
+		if (PanelButtons.btn4.isSelected()) {
+			panelej4.setVisible(true);
+		} else {
+			panelej4.setVisible(false);
+		}
+		
+		if (PanelButtons.btn5.isSelected()) {
+			panelej5.setVisible(true);
+		} else {
+			panelej5.setVisible(false);
+		}
+		
+		this.pack();
+		this.setMinimumSize(new Dimension(this.getWidth(), this.getHeight()));
+		
+		if (e.getSource() == PanelActivity.btnActivity) {
+			mostrarActividades();
+		}
+		
+		
+	}
+	/**
+	 * 
+	 */
+	private void mostrarActividades() {
+		int contador = 0;
+		String resultado = "Los ejercicios activos son: \n";
+		
+		JToggleButton [] botones = {PanelButtons.btn1, PanelButtons.btn2, PanelButtons.btn3, PanelButtons.btn4, PanelButtons.btn5};
+		
+		for (int i = 0; i < botones.length; i++) {
+			if (botones[i].isSelected()) {
+				resultado += "Ejercicio " + (i + 1) + "\n";
+				contador++;
+			}
+		}
+		
+		JOptionPane.showMessageDialog(this, "Ejercicios Activos: " + contador + "\n" + resultado);
+		
+		
+		
 	}
 
 }

@@ -13,7 +13,7 @@ import javax.swing.JPanel;
  *
  */
 public class PanelActivity extends JPanel {
-	private JButton btnActivity;
+	public static JButton btnActivity;
 	/**
 	 * 
 	 */

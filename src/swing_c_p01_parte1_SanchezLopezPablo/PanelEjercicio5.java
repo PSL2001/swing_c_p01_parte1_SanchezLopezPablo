@@ -16,14 +16,14 @@ import javax.swing.JSpinner;
  *
  */
 public class PanelEjercicio5 extends JPanel {
-	private JLabel labelTexto, limg1, limg2, limg3, limg4;
+	private JLabel ltexto5, limg1, limg2, limg3, limg4;
 	private JSpinner spinner;
 	private imageRes img1, img2, img3, img4;
 	/**
 	 * 
 	 */
 	public PanelEjercicio5() {
-		labelTexto = new JLabel("¿Cuantas Imágenes quieres mostrar?");
+		ltexto5 = new JLabel("¿Cuantas Imágenes quieres mostrar?");
 		spinner = new JSpinner();
 		
 		img1 = new imageRes("recursos/imagen.jpg");
@@ -31,23 +31,25 @@ public class PanelEjercicio5 extends JPanel {
 		img3 = new imageRes("recursos/imagen3.jpg");
 		img4 = new imageRes("recursos/imagen4.jpg");
 		
-		limg1 = new JLabel(img1.devolverImagen());
-		limg2 = new JLabel(img2.devolverImagen());
-		limg3 = new JLabel(img3.devolverImagen());
-		limg4 = new JLabel(img4.devolverImagen());
+		limg1 = new JLabel(img1.devolverImagen(10, 10));
+		limg2 = new JLabel(img2.devolverImagen(10, 10));
+		limg3 = new JLabel(img3.devolverImagen(10, 10));
+		limg4 = new JLabel(img4.devolverImagen(10, 10));
 		
 		Box cajaH = Box.createHorizontalBox();
 		Box cajaV = Box.createVerticalBox();
+		Box cajaH2 = Box.createHorizontalBox();
 		
-		cajaH.add(labelTexto);
+		cajaH.add(ltexto5);
 		cajaH.add(spinner);
 		
-		cajaV.add(limg1);
-		cajaV.add(limg2);
-		cajaV.add(limg3);
-		cajaV.add(limg4);
+		cajaH2.add(limg1);
+		cajaH2.add(limg2);
+		cajaH2.add(limg3);
+		cajaH2.add(limg4);
 		
 		cajaV.add(cajaH);
+		cajaV.add(cajaH2);
 		
 		this.add(cajaV);
 		

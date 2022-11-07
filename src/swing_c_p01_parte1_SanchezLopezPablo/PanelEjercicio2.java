@@ -22,7 +22,7 @@ import javax.swing.JPanel;
  */
 public class PanelEjercicio2 extends JPanel {
 	private JComboBox<String> cbFuentes;
-	private JLabel lTexto;
+	private JLabel ltexto2;
 	
 	/**
 	 * 
@@ -33,12 +33,12 @@ public class PanelEjercicio2 extends JPanel {
 		//Las añadimos al comboBox
 		cbFuentes = new JComboBox<String>(fuentes);
 		//Creamos el label con el texto
-		lTexto = new JLabel("En un lugar de la Mancha, de cuyo nombre ...");
+		ltexto2 = new JLabel("En un lugar de la Mancha, de cuyo nombre ...");
 		
 		//Creamos las constrains para cada item y las añadimos al panel
 		Box cajaV = Box.createVerticalBox();
 		cajaV.add(cbFuentes);
-		cajaV.add(lTexto);
+		cajaV.add(ltexto2);
 		
 		
 		this.add(cajaV);

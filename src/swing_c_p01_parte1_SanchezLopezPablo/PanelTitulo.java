@@ -27,7 +27,7 @@ public class PanelTitulo extends JPanel {
 	public PanelTitulo() {
 		//Declaramos los paneles
 		logo = new imageRes("recursos/LogoInstiLayout.jpg");
-		lImagen = new JLabel(logo.devolverImagen(), SwingConstants.CENTER);
+		lImagen = new JLabel(logo.devolverImagen(logo.getWidth(), logo.getHeight()), SwingConstants.CENTER);
 		lalumno = new JLabel("Alumno: ", SwingConstants.CENTER);
 		lnombreAlumno = new JLabel("Pablo Sánchez López", SwingConstants.CENTER);
 		

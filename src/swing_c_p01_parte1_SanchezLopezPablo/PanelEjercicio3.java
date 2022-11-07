@@ -18,7 +18,7 @@ import javax.swing.JRadioButton;
  *
  */
 public class PanelEjercicio3 extends JPanel {
-	private JLabel ltexto;
+	private JLabel ltexto3;
 	private ButtonGroup bgRadio;
 	private JRadioButton rb1, rb2, rb3, rb4;
 	/**
@@ -26,7 +26,7 @@ public class PanelEjercicio3 extends JPanel {
 	 */
 	public PanelEjercicio3() {
 		this.setLayout(new GridLayout(0, 1, 0, 0));
-		ltexto = new JLabel("En un lugar de la Mancha, de cuyo nombre ...");
+		ltexto3 = new JLabel("En un lugar de la Mancha, de cuyo nombre ...");
 		bgRadio = new ButtonGroup();
 		rb1 = new JRadioButton("Pequeño");
 		rb2 = new JRadioButton("Mediano");
@@ -48,7 +48,7 @@ public class PanelEjercicio3 extends JPanel {
 		cajaV.add(cajaH);
 		
 		
-		this.add(ltexto);
+		this.add(ltexto3);
 		this.add(cajaV);
 	}
 
