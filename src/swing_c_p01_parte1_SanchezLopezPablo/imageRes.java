@@ -39,7 +39,7 @@ public class imageRes {
 	public ImageIcon devolverImagen(int ancho, int largo) {
 		ImageIcon imagenSinRes = this.recurso;
 		Image imagenImage = imagenSinRes.getImage();
-		imagenImage.getScaledInstance(ancho, largo ,Image.SCALE_DEFAULT);
+		imagenImage.getScaledInstance(ancho, largo ,Image.SCALE_SMOOTH);
 		ImageIcon imageRes = new ImageIcon(imagenImage);
 		return imageRes;
 	}

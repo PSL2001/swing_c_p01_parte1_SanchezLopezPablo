@@ -5,7 +5,10 @@
  */
 package swing_c_p01_parte1_SanchezLopezPablo;
 
+import java.awt.Font;
 import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.Box;
 import javax.swing.ButtonGroup;
@@ -18,7 +21,7 @@ import javax.swing.JRadioButton;
  *
  * @author Usuario
  */
-public class PanelEjercicio3 extends JPanel {
+public class PanelEjercicio3 extends JPanel implements ActionListener {
 	
 	/** The ltexto 3. */
 	private JLabel ltexto3;
@@ -33,6 +36,7 @@ public class PanelEjercicio3 extends JPanel {
 	 * Instantiates a new panel ejercicio 3.
 	 */
 	public PanelEjercicio3() {
+		//Creamos el layout
 		this.setLayout(new GridLayout(0, 1, 0, 0));
 		ltexto3 = new JLabel("En un lugar de la Mancha, de cuyo nombre ...");
 		bgRadio = new ButtonGroup();
@@ -41,12 +45,19 @@ public class PanelEjercicio3 extends JPanel {
 		rb3 = new JRadioButton("Grande");
 		rb4 = new JRadioButton("Muy Grande");
 		
-		
+		//Añadimos los radiobuttons al grupo
 		bgRadio.add(rb1);
 		bgRadio.add(rb2);
 		bgRadio.add(rb3);
 		bgRadio.add(rb4);
 		
+		//Listeners
+		rb1.addActionListener(this);
+		rb2.addActionListener(this);
+		rb3.addActionListener(this);
+		rb4.addActionListener(this);
+		
+		//Añadimos
 		Box cajaV = Box.createVerticalBox();
 		Box cajaH = Box.createHorizontalBox();
 		cajaH.add(rb1);
@@ -58,6 +69,29 @@ public class PanelEjercicio3 extends JPanel {
 		
 		this.add(ltexto3);
 		this.add(cajaV);
+	}
+
+	/**
+	 * Action performed.
+	 *
+	 * @param e the e
+	 */
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		if (rb1.isSelected()) {
+			ltexto3.setFont(new Font("Times New Roman", Font.PLAIN, 5));
+		}
+		if (rb2.isSelected()) {
+			ltexto3.setFont(new Font("Times New Roman", Font.PLAIN, 10));
+		}
+		if (rb3.isSelected()) {
+			ltexto3.setFont(new Font("Times New Roman", Font.PLAIN, 15));
+		}
+		if (rb4.isSelected()) {
+			ltexto3.setFont(new Font("Times New Roman", Font.PLAIN, 20));
+		}
+		
+		
 	}
 
 }

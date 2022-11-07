@@ -5,11 +5,10 @@
  */
 package swing_c_p01_parte1_SanchezLopezPablo;
 
-import java.awt.BorderLayout;
+import java.awt.Font;
 import java.awt.GraphicsEnvironment;
-import java.awt.GridBagConstraints;
-import java.awt.GridBagLayout;
-import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.Box;
 import javax.swing.JComboBox;
@@ -21,7 +20,7 @@ import javax.swing.JPanel;
  *
  * @author usuario
  */
-public class PanelEjercicio2 extends JPanel {
+public class PanelEjercicio2 extends JPanel implements ActionListener {
 	
 	/** The cb fuentes. */
 	private JComboBox<String> cbFuentes;
@@ -45,10 +44,24 @@ public class PanelEjercicio2 extends JPanel {
 		cajaV.add(cbFuentes);
 		cajaV.add(ltexto2);
 		
+		//Listeners
+		cbFuentes.addActionListener(this);
 		
 		this.add(cajaV);
 		
 		
+		
+	}
+
+	/**
+	 * Action performed.
+	 *
+	 * @param e the e
+	 */
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		Object opcion = cbFuentes.getSelectedItem();
+		ltexto2.setFont(new Font(opcion.toString(), Font.PLAIN, 20));
 		
 	}
 

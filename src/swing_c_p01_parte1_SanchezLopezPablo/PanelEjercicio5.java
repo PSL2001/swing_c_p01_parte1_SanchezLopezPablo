@@ -9,6 +9,9 @@ import javax.swing.Box;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JSpinner;
+import javax.swing.SpinnerNumberModel;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
 
 
 /**
@@ -16,7 +19,7 @@ import javax.swing.JSpinner;
  *
  * @author Usuario
  */
-public class PanelEjercicio5 extends JPanel {
+public class PanelEjercicio5 extends JPanel implements ChangeListener {
 	
 	/** The limg 4. */
 	private JLabel ltexto5, limg1, limg2, limg3, limg4;
@@ -32,7 +35,7 @@ public class PanelEjercicio5 extends JPanel {
 	 */
 	public PanelEjercicio5() {
 		ltexto5 = new JLabel("¿Cuantas Imágenes quieres mostrar?");
-		spinner = new JSpinner();
+		spinner = new JSpinner(new SpinnerNumberModel(0, 0, 4, 1));
 		
 		img1 = new imageRes("recursos/imagen.jpg");
 		img2 = new imageRes("recursos/imagen2.jpg");
@@ -41,12 +44,21 @@ public class PanelEjercicio5 extends JPanel {
 		
 		limg1 = new JLabel(img1.devolverImagen(10, 10));
 		limg2 = new JLabel(img2.devolverImagen(10, 10));
-		limg3 = new JLabel(img3.devolverImagen(10, 10));
+		limg3 = new JLabel(img3.devolverImagen(img3.getWidth()/2, img3.getHeight()/2));
 		limg4 = new JLabel(img4.devolverImagen(10, 10));
+		
+		//Listeners
+		spinner.addChangeListener(this);
 		
 		Box cajaH = Box.createHorizontalBox();
 		Box cajaV = Box.createVerticalBox();
 		Box cajaH2 = Box.createHorizontalBox();
+		
+		//Hacemos las imagenes invisibles
+		limg1.setVisible(false);
+		limg2.setVisible(false);
+		limg3.setVisible(false);
+		limg4.setVisible(false);
 		
 		cajaH.add(ltexto5);
 		cajaH.add(spinner);
@@ -61,6 +73,25 @@ public class PanelEjercicio5 extends JPanel {
 		
 		this.add(cajaV);
 		
+	}
+
+	/**
+	 * State changed.
+	 *
+	 * @param e the e
+	 */
+	@Override
+	public void stateChanged(ChangeEvent e) {
+		int cantidad = (int) spinner.getValue();
+		JLabel [] labels = {limg1,limg2,limg3,limg4};
+		
+		for (int i = 0; i < labels.length; i++) {
+			labels[i].setVisible(false);
+		}
+		
+		for (int i = 0; i < cantidad; i++) {
+			labels[i].setVisible(true);
+		}
 	}
 
 }
