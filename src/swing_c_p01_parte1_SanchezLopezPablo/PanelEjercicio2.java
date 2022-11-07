@@ -5,15 +5,18 @@
  */
 package swing_c_p01_parte1_SanchezLopezPablo;
 
+import java.awt.Color;
 import java.awt.Font;
 import java.awt.GraphicsEnvironment;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.BorderFactory;
 import javax.swing.Box;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.border.EtchedBorder;
 
 /**
  * The Class PanelEjercicio2.
@@ -48,6 +51,7 @@ public class PanelEjercicio2 extends JPanel implements ActionListener {
 		cbFuentes.addActionListener(this);
 		
 		this.add(cajaV);
+		this.setBorder(BorderFactory.createEtchedBorder(EtchedBorder.RAISED, Color.RED, Color.GRAY));
 		
 		
 		

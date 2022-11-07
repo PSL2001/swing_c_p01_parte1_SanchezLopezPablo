@@ -5,6 +5,9 @@
  */
 package swing_c_p01_parte1_SanchezLopezPablo;
 
+import java.awt.Color;
+
+import javax.swing.BorderFactory;
 import javax.swing.Box;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -72,6 +75,7 @@ public class PanelEjercicio5 extends JPanel implements ChangeListener {
 		cajaV.add(cajaH2);
 		
 		this.add(cajaV);
+		this.setBorder(BorderFactory.createLineBorder(Color.ORANGE, 2));
 		
 	}
 

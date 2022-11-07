@@ -5,11 +5,13 @@
  */
 package swing_c_p01_parte1_SanchezLopezPablo;
 
+import java.awt.Color;
 import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.BorderFactory;
 import javax.swing.Box;
 import javax.swing.ButtonGroup;
 import javax.swing.JLabel;
@@ -69,6 +71,7 @@ public class PanelEjercicio3 extends JPanel implements ActionListener {
 		
 		this.add(ltexto3);
 		this.add(cajaV);
+		this.setBorder(BorderFactory.createMatteBorder(1, 1, 1, 1, Color.CYAN));
 	}
 
 	/**
