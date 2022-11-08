@@ -40,15 +40,21 @@ public class PanelEjercicio5 extends JPanel implements ChangeListener {
 		ltexto5 = new JLabel("¿Cuantas Imágenes quieres mostrar?");
 		spinner = new JSpinner(new SpinnerNumberModel(0, 0, 4, 1));
 		
-		img1 = new imageRes("recursos/imagen.jpg");
-		img2 = new imageRes("recursos/imagen2.jpg");
-		img3 = new imageRes("recursos/imagen3.jpg");
-		img4 = new imageRes("recursos/imagen4.jpg");
+		img1 = new imageRes("recursos/imagen.jpg", 0, 0);
+		img2 = new imageRes("recursos/imagen2.jpg", 0, 0);
+		img3 = new imageRes("recursos/imagen3.jpg", 0, 0);
+		img4 = new imageRes("recursos/imagen4.jpg", 0, 0);
 		
-		limg1 = new JLabel(img1.devolverImagen(10, 10));
-		limg2 = new JLabel(img2.devolverImagen(10, 10));
-		limg3 = new JLabel(img3.devolverImagen(img3.getWidth()/2, img3.getHeight()/2));
-		limg4 = new JLabel(img4.devolverImagen(10, 10));
+		img2.setAncho(img2.getAncho()/2);
+		img2.setLargo(img2.getLargo()/2);
+		
+		img3.setAncho(img3.getAncho()/2);
+		img3.setLargo(img3.getLargo()/2);
+		
+		limg1 = new JLabel(img1.devolverImagen());
+		limg2 = new JLabel(img2.devolverImagen());
+		limg3 = new JLabel(img3.devolverImagen());
+		limg4 = new JLabel(img4.devolverImagen());
 		
 		//Listeners
 		spinner.addChangeListener(this);
@@ -67,8 +73,11 @@ public class PanelEjercicio5 extends JPanel implements ChangeListener {
 		cajaH.add(spinner);
 		
 		cajaH2.add(limg1);
+		cajaH2.add(Box.createHorizontalStrut(10));
 		cajaH2.add(limg2);
+		cajaH2.add(Box.createHorizontalStrut(10));
 		cajaH2.add(limg3);
+		cajaH2.add(Box.createHorizontalStrut(10));
 		cajaH2.add(limg4);
 		
 		cajaV.add(cajaH);

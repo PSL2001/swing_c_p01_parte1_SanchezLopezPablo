@@ -116,6 +116,7 @@ public class Ventana extends JFrame implements ActionListener {
 	 */
 	@Override
 	public void actionPerformed(ActionEvent e) {
+		//Comos los botones de los paneles son estaticos, podemos acceder a ellos desde ventana
 		if (PanelButtons.btn1.isSelected()) {
 			panelej1.setVisible(true);
 		} else {
@@ -158,6 +159,7 @@ public class Ventana extends JFrame implements ActionListener {
 	
 	/**
 	 * Mostrar actividades.
+	 * Funcion que muestra cuantas actividades estan activadas
 	 */
 	private void mostrarActividades() {
 		int contador = 0;

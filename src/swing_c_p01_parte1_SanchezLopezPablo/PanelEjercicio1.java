@@ -50,14 +50,18 @@ public class PanelEjercicio1 extends JPanel implements ActionListener {
 		cbNegrita.addActionListener(this);
 		cbCursiva.addActionListener(this);
 
-		// Y lo añadimos al panel
+		// Y lo añadimos al panel con cajas
 		Box cajaV = Box.createVerticalBox();
 		Box cajaH = Box.createHorizontalBox();
-
+		/*
+		 * Introduzco la caja horizontal dentro de la vertical para que se añada directamente al centro
+		 * si no hago esto, se queda descentrada la actividad
+		 */
 		cajaH.add(cbNegrita);
 		cajaH.add(cbCursiva);
 		cajaV.add(cajaH);
-
+		
+		//Añadimos al panel y ponemos un borde
 		this.add(ltexto1);
 		this.add(cajaV);
 		this.setBorder(
@@ -72,16 +76,17 @@ public class PanelEjercicio1 extends JPanel implements ActionListener {
 	 */
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		Font fuentedefault = ltexto1.getFont();
+		//1º se comprueba si ambos estan seleccionados
 		if (cbNegrita.isSelected() && cbCursiva.isSelected()) {
-			// cambio el texto a negrita y cursiva
+			// Si se da ese caso, cambio el texto a negrita y/o cursiva
 			ltexto1.setFont( new Font("Times New Roman", Font.BOLD | Font.ITALIC, 20));
-		} else if (cbCursiva.isSelected()) {
-			// Cambie el texto a cursiva
+		} else if (cbCursiva.isSelected()) { //En otro caso si solo esta activa la cursiva
+			// Cambiamos el texto a cursiva
 			ltexto1.setFont(new Font("Times New Roman", Font.ITALIC, 20));
-		} else if (cbNegrita.isSelected()) {
+		} else if (cbNegrita.isSelected()) { //Hacemos lo mismo para negrita
 			ltexto1.setFont(new Font("Times New Roman", Font.BOLD, 20));
 		} else {
+			//Y si ninguno esta activado dejamos la fuente en plano
 			ltexto1.setFont(new Font("Times New Roman", Font.PLAIN, 20));
 
 		}
