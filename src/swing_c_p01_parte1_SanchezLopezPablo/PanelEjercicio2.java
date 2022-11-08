@@ -35,21 +35,21 @@ public class PanelEjercicio2 extends JPanel implements ActionListener {
 	 * Instantiates a new panel ejercicio 2.
 	 */
 	public PanelEjercicio2() {
-		//Obtenemos las fuentes del sistema
+		//Obtenemos las fuentes del sistema con GraphicsEnviroment usando el metodo getAvailableFontFamilyNames() y las guardamos en un array
 		String [] fuentes = GraphicsEnvironment.getLocalGraphicsEnvironment().getAvailableFontFamilyNames();
 		//Las añadimos al comboBox
 		cbFuentes = new JComboBox<String>(fuentes);
 		//Creamos el label con el texto
 		ltexto2 = new JLabel("En un lugar de la Mancha, de cuyo nombre ...");
 		
-		//Creamos las constrains para cada item y las añadimos al panel
+		//Creamos las cajas para cada item y las añadimos al panel
 		Box cajaV = Box.createVerticalBox();
 		cajaV.add(cbFuentes);
 		cajaV.add(ltexto2);
 		
 		//Listeners
 		cbFuentes.addActionListener(this);
-		
+		//Finalmente añadimos a la ventana y ponemos un borde
 		this.add(cajaV);
 		this.setBorder(BorderFactory.createEtchedBorder(EtchedBorder.RAISED, Color.RED, Color.GRAY));
 		

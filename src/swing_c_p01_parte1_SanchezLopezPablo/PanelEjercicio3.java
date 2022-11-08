@@ -40,6 +40,7 @@ public class PanelEjercicio3 extends JPanel implements ActionListener {
 	public PanelEjercicio3() {
 		//Creamos el layout
 		this.setLayout(new GridLayout(0, 1, 0, 0));
+		//Declaramos los objetos
 		ltexto3 = new JLabel("En un lugar de la Mancha, de cuyo nombre ...");
 		bgRadio = new ButtonGroup();
 		rb1 = new JRadioButton("Pequeño");
@@ -47,7 +48,7 @@ public class PanelEjercicio3 extends JPanel implements ActionListener {
 		rb3 = new JRadioButton("Grande");
 		rb4 = new JRadioButton("Muy Grande");
 		
-		//Añadimos los radiobuttons al grupo
+		//Añadimos los radiobuttons al grupo (se añaden para que java entienda que pertenecen a lo mismo)
 		bgRadio.add(rb1);
 		bgRadio.add(rb2);
 		bgRadio.add(rb3);
@@ -59,7 +60,7 @@ public class PanelEjercicio3 extends JPanel implements ActionListener {
 		rb3.addActionListener(this);
 		rb4.addActionListener(this);
 		
-		//Añadimos
+		//Añadimos a las cajas los radiobutton
 		Box cajaV = Box.createVerticalBox();
 		Box cajaH = Box.createHorizontalBox();
 		cajaH.add(rb1);
@@ -68,7 +69,7 @@ public class PanelEjercicio3 extends JPanel implements ActionListener {
 		cajaH.add(rb4);
 		cajaV.add(cajaH);
 		
-		
+		//Y añadimos a la ventana con un borde
 		this.add(ltexto3);
 		this.add(cajaV);
 		this.setBorder(BorderFactory.createMatteBorder(1, 1, 1, 1, Color.CYAN));

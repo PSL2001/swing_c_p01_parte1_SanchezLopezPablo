@@ -6,6 +6,7 @@
 package swing_c_p01_parte1_SanchezLopezPablo;
 
 import java.awt.Font;
+import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -35,10 +36,15 @@ public class PanelEjercicio4 extends JPanel implements ChangeListener  {
 	 * Instantiates a new panel ejercicio 4.
 	 */
 	public PanelEjercicio4() {
-		slider = new JSlider(SwingConstants.HORIZONTAL,0,48,0);
-		slider.setMajorTickSpacing(48);
+		//Instanciamos los objetos de swing
+		slider = new JSlider(SwingConstants.HORIZONTAL,8,48,8);
+		//Ponemos el espaciado mayor del tick a 48
+		slider.setMajorTickSpacing(20);
+		//Y el menor a 8
 		slider.setMinorTickSpacing(8);
+		//Pintamos los ticks
 		slider.setPaintTicks(true);
+		//Y pintamos los labels
 		slider.setPaintLabels(true);
 		
 		ltexto4 = new JLabel("En un lugar de la Mancha, de cuyo nombre ...");
@@ -46,9 +52,15 @@ public class PanelEjercicio4 extends JPanel implements ChangeListener  {
 		//Listeners
 		slider.addChangeListener(this);
 		
+		//Creamos la caja y añadimos los elementos en esta
+		Box cajaH = Box.createHorizontalBox();
+		Box cajaH2 = Box.createHorizontalBox();
 		Box cajaV = Box.createVerticalBox();
-		cajaV.add(slider);
-		cajaV.add(ltexto4);
+		cajaH.add(slider);
+		cajaH2.add(ltexto4);
+		cajaV.add(cajaH);
+		cajaV.add(Box.createVerticalStrut(10));
+		cajaV.add(cajaH2);
 		
 		this.add(cajaV);
 		this.setBorder(BorderFactory.createTitledBorder("Ejercicio 4"));

@@ -54,6 +54,7 @@ public class imageRes {
 		Image imageRes = imagenImage.getScaledInstance(this.ancho, this.largo ,Image.SCALE_SMOOTH);
 		//Creamos una nueva imageIcon con la nueva resolucion
 		ImageIcon imageIconRes = new ImageIcon(imageRes);
+		//Y la devolvemos
 		return imageIconRes;
 	}
 	
